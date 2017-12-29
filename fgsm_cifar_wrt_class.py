@@ -65,6 +65,7 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
         x_adv = tf.stop_gradient(x_adv - (dy_dx))
         x_adv = tf.clip_by_value(x_adv, x_adv_llimit, x_adv_ulimit)
         all_flipped = tf.equal(tf.reduce_sum(mask), 0.0)
+
         return x_adv, all_flipped
 
     x_adv, all_flipped = tf.while_loop(_cond, _body, (x_adv, False), back_prop=False,
