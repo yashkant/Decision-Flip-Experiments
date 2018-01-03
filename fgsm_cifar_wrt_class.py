@@ -24,7 +24,7 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
 
     ybar = model(x_adv)
     pred = tf.argmax(ybar, axis=1)
-    yshape = ybar.get_shape().as_list()
+    yshape = list(ybar.get_shape())
     ydim = yshape[1]
 
     indices = tf.zeros_like(pred)
@@ -44,14 +44,20 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
     def _cond(x_adv, all_flipped):
         return tf.not_equal(True, all_flipped)
 
+    def replace_none_with_zero(l,s):
+        if(l == None):
+            return tf.zeros(s)
+        else: 
+            return l
 
     def _body(x_adv, all_flipped):
-        ybar_new, logits = model(x_adv, logits=True)
+        ybar_new, logits = model(x_adv, logits=True)    
         pred_new = tf.argmax(ybar_new, axis=1)
         loss = loss_fn(labels=target, logits=logits)
         not_flipped = tf.not_equal(indices,pred_new)
         # not_flipped = tf.equal(pred,pred_new)
-        dy_dx, = tf.gradients(loss, x_adv)
+        g,=tf.gradients(loss, x_adv)
+        dy_dx = replace_none_with_zero(g, tf.shape(x_adv))
         zeroes = tf.zeros(tf.shape(dy_dx), tf.float32)
         ones = tf.ones(tf.shape(dy_dx), tf.float32)
         mask = tf.where(not_flipped, ones, zeroes)
@@ -71,3 +77,5 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
     x_adv, all_flipped = tf.while_loop(_cond, _body, (x_adv, False), back_prop=False,
                              name='fgsm')
     return x_adv
+
+    
