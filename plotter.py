@@ -3,6 +3,7 @@ import matplotlib.gridspec as gridspec
 import matplotlib
 matplotlib.use('Agg')
 import numpy as np
+import matplotlib.patches as mpatches
 
 
 def plot_data_graph(l2_test, l2_train, l2_random, l2_random_normal, n, from_cls, to_cls):
