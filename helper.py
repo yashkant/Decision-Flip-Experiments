@@ -8,6 +8,16 @@ img_chas = 3
 input_shape = (img_rows, img_cols, img_chas)
 n_classes = 10
 
+layer_shapes = {
+    '0': [32, 32, 3],
+    '1': [16, 16, 32],
+    '2': [8, 8, 64],
+    '3': [1024],
+    '4': [128],
+    '5': [10]
+}
+
+
 def load_CIFAR10(ROOT,os):
     """ load all of cifar """
     xs = []
@@ -193,3 +203,61 @@ def make_label(i, m, e, n, r):
 
 def get_flipped_class(X_adv, cls):
     return X_adv[:, cls]
+
+
+
+def get_l2_at_layer(X, X_flip, layer=-1):
+    X = sess.run(env.layer_out, feed_dict={
+        env.x: X, env.training: False, env.lyr: layer})
+
+    X_flip = sess.run(env.layer_out, feed_dict={
+        env.x: X_flip, env.training: False, env.lyr: layer})
+
+    print(X.shape)
+
+    if (layer == -1):
+        dim2 = np.prod(layer_shapes['0'])
+    else:
+        dim2 = np.prod(layer_shapes[str(layer)])
+    print(dim2)
+    a = X.reshape(-1, dim2)
+    b = X_flip.reshape(-1, dim2)
+
+    l2_unsquared = np.sum(np.square(a - b), axis=1)
+
+    return l2_unsquared
+
+
+def find_l2_batch(X_test, X_adv):
+    ans = np.zeros([X_test.shape[0], n_classes], dtype=np.float32)
+    for i in range(X_test.shape[0]):
+        for j in range(n_classes):
+            ans[i][j] = find_l2(X_test[i], X_adv[i][j])
+    return ans
+
+
+# m2 is the grouped flipping
+# m1 is the single flipping
+# This method returns the distance of each predictions from repective test points calculated by m1 and m2 resp.
+def find_m1_m2(X_test, X_adv_one, X_adv_test):
+    dist_adv_m1 = find_l2(X_test, X_adv_one)
+    b = find_l2_batch(X_test, X_adv_test)
+    dist_adv_m2 = np.partition(b, axis=1, kth=1)[:, 1]
+    return np.sqrt(dist_adv_m1), np.sqrt(dist_adv_m2)
+
+
+# Give this function X_adv_test it gives you the points corresponding to
+# each example having min dists and their indices
+def give_m2_ans(X_test, X_adv_test, cls=-1):
+    if (cls == -1):
+        dists = find_l2_batch(X_test, X_adv_test)
+        second_min_indices = np.partition(dists, axis=1, kth=1)[:, 1]
+        for i in range(X_test.shape[0]):
+            second_min_indices[i] = (np.where(second_min_indices[i] == dists[i])[0][0])
+        ans = np.empty([X_adv_test.shape[0], img_rows, img_cols, img_chas])
+        for i in range(ans.shape[0]):
+            ans[i] = X_adv_test[i][second_min_indices[i].astype(int)]
+        return second_min_indices, ans
+    else:
+        return 0, get_flipped_class(X_adv_test, cls)
+
