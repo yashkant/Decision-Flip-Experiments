@@ -169,3 +169,27 @@ def load_data(os):
     y_train = y_train[:n_train]
 
     return X_train, y_train, X_test, y_test, X_valid, y_valid
+
+
+def remove_zeroes(X):
+    indices = np.where(X == 0)[0]
+    return np.delete(X, indices)
+
+
+def get_class(X, Y, Z, cls):
+    p = np.argmax(Y, axis=1)
+    indices = np.where(p == cls)
+    return X[indices], Y[indices], Z[indices]
+
+
+def make_label(i, m, e, n, r):
+    if (r == False):
+        return i + "_m" + str(m) + "_e" + str(e) + "_n" + str(n)
+    else:
+        base = i + "_m" + str(m) + "_e" + str(e) + "_n" + str(n) + "_r"
+        lrn = base + "normal"
+        return base, lrn
+
+
+def get_flipped_class(X_adv, cls):
+    return X_adv[:, cls]
