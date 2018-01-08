@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="403b740a-bc66-44e7-b9ba-257b7308a786" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CIFAR/.ipynb_checkpoints/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy2-checkpoint.ipynb" afterPath="$PROJECT_DIR$/CIFAR/.ipynb_checkpoints/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy2-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy2.ipynb" afterPath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy2.ipynb" />
+      <change beforePath="$PROJECT_DIR$/CIFAR/.ipynb_checkpoints/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-train_again-Copy1-checkpoint.ipynb" afterPath="$PROJECT_DIR$/CIFAR/.ipynb_checkpoints/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-train_again-Copy1-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-train_again-Copy1.ipynb" afterPath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-train_again-Copy1.ipynb" />
-      <change beforePath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min.ipynb" afterPath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min.ipynb" />
-      <change beforePath="$PROJECT_DIR$/helper.py" afterPath="$PROJECT_DIR$/helper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -251,6 +248,127 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/fgsm_cifar_wrt_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy1.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy3.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-train_again-Copy1.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="219" column="0" lean-forward="false" selection-start-line="156" selection-start-column="18" selection-end-line="219" selection-end-column="0" />
+          <folding>
+            <element signature="e#162#278#0" expanded="false" />
+            <element signature="e#313#687#0" expanded="false" />
+            <element signature="e#397#520#0" expanded="false" />
+            <element signature="e#726#1031#0" expanded="false" />
+            <element signature="e#805#1031#0" expanded="false" />
+            <element signature="e#1066#1216#0" expanded="false" />
+            <element signature="e#1257#1462#0" expanded="false" />
+            <element signature="e#1365#1447#0" expanded="false" />
+            <element signature="e#1491#1553#0" expanded="false" />
+            <element signature="e#1594#1771#0" expanded="false" />
+            <element signature="e#1809#2027#0" expanded="false" />
+            <element signature="e#1909#2027#0" expanded="false" />
+            <element signature="e#2069#2089#0" expanded="false" />
+            <element signature="e#2118#2151#0" expanded="false" />
+            <element signature="e#2180#2212#0" expanded="false" />
+            <element signature="e#2284#3084#0" expanded="false" />
+            <element signature="e#3145#3277#0" expanded="false" />
+            <element signature="e#3280#3308#0" expanded="false" />
+            <element signature="e#3500#3691#0" expanded="false" />
+            <element signature="e#3694#3766#0" expanded="false" />
+            <element signature="e#4442#5371#0" expanded="false" />
+            <element signature="e#5400#5462#0" expanded="false" />
+            <element signature="e#5498#5601#0" expanded="false" />
+            <element signature="e#5639#5857#0" expanded="false" />
+            <element signature="e#5739#5857#0" expanded="false" />
+            <element signature="e#5899#5919#0" expanded="false" />
+            <element signature="e#6527#6732#0" expanded="false" />
+            <element signature="e#6635#6717#0" expanded="false" />
+            <element signature="e#6735#6763#0" expanded="false" />
+            <element signature="e#6955#7146#0" expanded="false" />
+            <element signature="e#7149#7221#0" expanded="false" />
+            <element signature="e#7321#7871#0" expanded="false" />
+            <element signature="e#7345#7808#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plotter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#31#0" expanded="false" />
+            <element signature="e#946#1077#0" expanded="false" />
+            <element signature="e#1151#1361#0" expanded="false" />
+            <element signature="e#1440#2080#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/test.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -298,7 +416,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
             <element signature="e#946#1077#0" expanded="false" />
             <element signature="e#1151#1361#0" expanded="false" />
             <element signature="e#1440#2080#0" expanded="false" />
@@ -368,7 +486,7 @@
         <state relative-caret-position="176">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
             <element signature="e#946#1077#0" expanded="false" />
             <element signature="e#1151#1361#0" expanded="false" />
             <element signature="e#1440#2080#0" expanded="false" />
@@ -584,7 +702,7 @@
         <state relative-caret-position="44">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
             <element signature="e#946#1077#0" expanded="false" />
             <element signature="e#1151#1361#0" expanded="false" />
             <element signature="e#1440#2080#0" expanded="false" />
@@ -705,13 +823,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy3.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-per-layer-Copy3.ipynb" />
     <entry file="file://$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-train_again-Copy1.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -766,7 +878,7 @@
         <state relative-caret-position="220">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="false" />
             <element signature="e#946#1077#0" expanded="false" />
             <element signature="e#1151#1361#0" expanded="false" />
             <element signature="e#1440#2080#0" expanded="false" />
@@ -790,15 +902,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CIFAR/test.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CIFAR/test.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CIFAR/test.jpg" />
+    <entry file="file://$PROJECT_DIR$/CIFAR/test.png" />
   </component>
 </project>
