@@ -1,7 +1,6 @@
 import numpy as np
 import _pickle as pickle
 
-
 img_rows = 32
 img_cols = 32
 img_chas = 3
@@ -18,7 +17,7 @@ layer_shapes = {
 }
 
 
-def load_CIFAR10(ROOT,os):
+def load_CIFAR10(ROOT, os):
     """ load all of cifar """
     xs = []
     ys = []
@@ -65,10 +64,13 @@ def remove_zeroes(X):
     return np.delete(X, indices)
 
 
-def get_class(X, Y, Z, cls):
+def get_class(X, Y, cls, Z=None):
     p = np.argmax(Y, axis=1)
     indices = np.where(p == cls)
-    return X[indices], Y[indices], Z[indices]
+    if Z is not None:
+        return X[indices], Y[indices], Z[indices]
+    else:
+        return X[indices], Y[indices]
 
 
 def make_label(i, m, e, n, r):
@@ -205,21 +207,20 @@ def get_flipped_class(X_adv, cls):
     return X_adv[:, cls]
 
 
-
-def get_l2_at_layer(X, X_flip, layer=-1):
+def get_l2_at_layer(X, X_flip, sess, env, layer=-1):
     X = sess.run(env.layer_out, feed_dict={
         env.x: X, env.training: False, env.lyr: layer})
 
     X_flip = sess.run(env.layer_out, feed_dict={
         env.x: X_flip, env.training: False, env.lyr: layer})
 
-    print(X.shape)
+    # print(X.shape)
 
-    if (layer == -1):
+    if layer == -1:
         dim2 = np.prod(layer_shapes['0'])
     else:
         dim2 = np.prod(layer_shapes[str(layer)])
-    print(dim2)
+    # print(dim2)
     a = X.reshape(-1, dim2)
     b = X_flip.reshape(-1, dim2)
 
@@ -260,4 +261,3 @@ def give_m2_ans(X_test, X_adv_test, cls=-1):
         return second_min_indices, ans
     else:
         return 0, get_flipped_class(X_adv_test, cls)
-
