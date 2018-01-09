@@ -63,13 +63,14 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
         mask = tf.where(not_flipped, ones, zeroes)
         dy_dx = tf.reshape(dy_dx,[-1,32*32*3])
         mag = tf.norm(dy_dx,axis=1, keep_dims=True)
-        ans = tf.ones(tf.shape(dy_dx))/(mag)
+        ans = tf.cond(tf.equal(tf.reduce_sum(mag),0.0),lambda: tf.ones(tf.shape(dy_dx)), lambda: tf.ones(tf.shape(dy_dx))/(mag))
+        mask = tf.cond(tf.equal(tf.reduce_sum(mag),0.0),lambda: zeroes, lambda: mask)
         ans = ans*(step_size)
         dy_dx = ans*dy_dx
         dy_dx = tf.reshape(dy_dx,[-1,32,32,3])
         dy_dx = mask*dy_dx
-        x_adv = tf.stop_gradient(x_adv - (dy_dx))
-        x_adv = tf.clip_by_value(x_adv, x_adv_llimit, x_adv_ulimit)
+        x_adv = tf.stop_gradient(x_adv - ( dy_dx))
+        # x_adv = tf.clip_by_value(x_adv, x_adv_llimit, x_adv_ulimit)
         all_flipped = tf.equal(tf.reduce_sum(mask), 0.0)
 
         return x_adv, all_flipped
