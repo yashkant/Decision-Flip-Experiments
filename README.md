@@ -5,9 +5,9 @@ To begin with experiments you will need Tensorflow and matplotlib installed on t
 
 **Helper Modules:**
 
--helper.py : Contains helper functions.  
--plotter.py: Contains graph plotting functions.  
--saveloader.py: Contains saving and loading functions.  
+- helper.py : Contains helper functions.  
+- plotter.py: Contains graph plotting functions.  
+- saveloader.py: Contains saving and loading functions.  
 
 
 **The last cell of the notebooks executes the corresponding experiment, where the arguments could be as follows:**
@@ -22,8 +22,8 @@ To begin with experiments you will need Tensorflow and matplotlib installed on t
   
 **Experiment Name : Vanilla Decision Flip Experiment ([vanilla-decision-flip.ipynb](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/CIFAR/vanilla-decision-flip.ipynb))**
 
--Flips the given examples to all the possible classes for train, test, random, random-normal data.  
--Performs per class graphical analysis of the distances for the above mentioned types of data. Currently for classes 0,1.  
+- Flips the given examples to all the possible classes for train, test, random, random-normal data.  
+- Performs per class graphical analysis of the distances for the above mentioned types of data. Currently for classes 0,1.  
 
 Todo: Add the measure for multiple boundary hits, prepare functions to save the plots and put it in plotter.   
 
