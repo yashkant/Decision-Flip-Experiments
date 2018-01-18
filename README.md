@@ -30,5 +30,6 @@ Todo: Add the measure for multiple boundary hits, prepare functions to save the 
 
 **Experiment Name : Train again and Flip Experiment ([train_again.ipynb](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/CIFAR/train_again.ipynb) and [train_again-cls_scores.ipynb](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/CIFAR/train_again-cls_scores.ipynb) )**
 
+- Compares the distances across given examples on uniformly pre-trained model vs overfitted model on these examples.  
 
 
