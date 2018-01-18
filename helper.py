@@ -261,3 +261,25 @@ def give_m2_ans(X_test, X_adv_test, cls=-1):
         return second_min_indices, ans
     else:
         return 0, get_flipped_class(X_adv_test, cls)
+
+
+# Redundant Old Method! 
+def create_adv(X, Y, label):
+    print('\nCrafting adversarial')
+    n_sample = X.shape[0]
+    batch_size = 1
+    n_batch = int(np.ceil(n_sample / batch_size))
+    n_epoch = 20
+    X_adv = np.empty_like(X)
+    for ind in range(n_batch):
+        print(' batch {0}/{1}'.format(ind + 1, n_batch), end='\r')
+        start = ind * batch_size
+        end = min(n_sample, start + batch_size)
+        tmp, all_flipped = sess.run([env.x_adv, env.all_flipped], feed_dict={env.x: X[start:end],
+                                                                             env.y: Y[start:end],
+                                                                             env.training: False})
+        X_adv[start:end] = tmp
+    print('\nSaving adversarial')
+    os.makedirs('data', exist_ok=True)
+    save_as_txt(get_flip_path(label), X_adv)
+    return X_adv
