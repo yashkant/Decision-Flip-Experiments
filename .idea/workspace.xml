@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="403b740a-bc66-44e7-b9ba-257b7308a786" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CIFAR/.ipynb_checkpoints/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min-checkpoint.ipynb" afterPath="$PROJECT_DIR$/CIFAR/.ipynb_checkpoints/vanilla-decision-flip-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/CIFAR/ex_lass_signum_no_fixed-step-length-CIFAR10-M2-epoch100-min.ipynb" afterPath="$PROJECT_DIR$/CIFAR/vanilla-decision-flip.ipynb" />
       <change beforePath="$PROJECT_DIR$/helper.py" afterPath="$PROJECT_DIR$/helper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/helper.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
-              <caret line="265" column="24" lean-forward="true" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
+              <caret line="265" column="23" lean-forward="false" selection-start-line="265" selection-start-column="23" selection-end-line="265" selection-end-column="23" />
               <folding>
                 <element signature="e#162#278#0" expanded="false" />
                 <element signature="e#313#687#0" expanded="false" />
@@ -116,7 +113,7 @@
                 <element signature="e#7149#7221#0" expanded="false" />
                 <element signature="e#7321#7871#0" expanded="false" />
                 <element signature="e#7345#7808#0" expanded="false" />
-                <element signature="e#7932#8744#0" expanded="false" />
+                <element signature="e#7931#8743#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -333,9 +330,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1981" y="-4" width="1859" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21459696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -698,7 +694,7 @@
     <entry file="file://$PROJECT_DIR$/helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="265" column="24" lean-forward="true" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
+          <caret line="265" column="23" lean-forward="false" selection-start-line="265" selection-start-column="23" selection-end-line="265" selection-end-column="23" />
           <folding>
             <element signature="e#162#278#0" expanded="false" />
             <element signature="e#313#687#0" expanded="false" />
@@ -738,7 +734,7 @@
             <element signature="e#7149#7221#0" expanded="false" />
             <element signature="e#7321#7871#0" expanded="false" />
             <element signature="e#7345#7808#0" expanded="false" />
-            <element signature="e#7932#8744#0" expanded="false" />
+            <element signature="e#7931#8743#0" expanded="false" />
           </folding>
         </state>
       </provider>

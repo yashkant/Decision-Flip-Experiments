@@ -263,7 +263,7 @@ def give_m2_ans(X_test, X_adv_test, cls=-1):
         return 0, get_flipped_class(X_adv_test, cls)
 
 
-# Redundant Old Method! 
+# Redundant Old Method!
 def create_adv(X, Y, label):
     print('\nCrafting adversarial')
     n_sample = X.shape[0]
