@@ -49,3 +49,41 @@ Todo: Add the measure for multiple boundary hits, prepare functions to save the 
 
 - Experiment to compare the distance of a point from its own class members and the nearest flipped point across different layers of the model. 
 
+
+## Experiment Results 
+
+**Decision Flip Experiments:** 
+
+
+We find the derivative of Loss (Cost Function used to optimize the parameters of the model) w.r.t to the features (dimensions) of the image and scale its norm with a hypeparam (epsilon).
+
+The quantity received is used as a perturbation until the label of the data point is flipped. So, in this case we end up taking steps of equal magnitude in the gradient’s direction. 
+
+We compare the results across various initial and target classes and also across different layers : 
+
+
+
+**Overfit and Flip Experiment:**
+
+To more concretely analyze our results we overfit our model on a randomly chosen datapoint from the training set and then proceed to analyze the decision boundaries before and after overfitting. 
+
+The results are as shown below :
+
+
+
+Occasionally there were a few points for which the decision boundaries originally were very close and after overfitting were pushed  away, one of them is shown below: 
+
+**Own Class to Flipped Ratio Experiment :**
+
+Here we compare the distances of a point’s own class to the nearest flipped point using the above stated algorithm, we compare these distances across different layers of the model.
+
+
+It is observed that as we go deeper and deeper in the model layers the distance from the members of own class decreases whereas the distance from flipped point increases and hence the ratio of  own/flip plotted across different layers of the model follows a decaying plot as follows: 
+
+
+
+
+
+
+
+
