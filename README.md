@@ -61,6 +61,11 @@ The quantity received is used as a perturbation until the label of the data poin
 
 We compare the results across various initial and target classes and also across different layers : 
 
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp1_3.png)
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp1_2.png)
+
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp1_1.png)
+
 
 
 **Overfit and Flip Experiment:**
@@ -69,9 +74,13 @@ To more concretely analyze our results we overfit our model on a randomly chosen
 
 The results are as shown below :
 
-
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp2_3.png)
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp2_2.png)
 
 Occasionally there were a few points for which the decision boundaries originally were very close and after overfitting were pushed  away, one of them is shown below: 
+
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp2_1.png)
+
 
 **Own Class to Flipped Ratio Experiment :**
 
@@ -80,10 +89,4 @@ Here we compare the distances of a point’s own class to the nearest flipped po
 
 It is observed that as we go deeper and deeper in the model layers the distance from the members of own class decreases whereas the distance from flipped point increases and hence the ratio of  own/flip plotted across different layers of the model follows a decaying plot as follows: 
 
-
-
-
-
-
-
-
+![alt text](https://github.com/yashkant/Decision-Flip-Experiments/blob/master/readme_files/exp3.png)
