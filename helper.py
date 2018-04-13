@@ -155,7 +155,7 @@ def give_m2_ans(X_test, X_adv_test, cls=-1):
 
 
 def load_data(os):
-    print('\nLoading CIFAR10')
+    print('Loading CIFAR10')
     cifar10_dir = 'cifar-10-batches-py'
     X_train, y_train, X_test, y_test = load_CIFAR10(cifar10_dir, os)
 
@@ -167,10 +167,12 @@ def load_data(os):
 
     y_train = _to_categorical(y_train, n_classes)
     y_test = _to_categorical(y_test, n_classes)
-
-    print('\nLoading pre-Shuffled training data')
-    ind = np.loadtxt(get_misc_path('ind'), dtype=int)
-    X_train, y_train = X_train[ind], y_train[ind]
+    
+    print('Loading pre-Shuffled training data')
+    np.random.seed(42)
+    ind = np.arange(0, X_train.shape[0])
+    ind = np.random.shuffle(ind)
+    X_train, y_train = X_train[ind][0], y_train[ind][0]
 
     # split training/validation dataset
     validation_split = 0.1

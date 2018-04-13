@@ -38,7 +38,7 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
     if 1 == ydim:
         loss_fn = tf.nn.sigmoid_cross_entropy_with_logits
     else:
-        loss_fn = tf.nn.softmax_cross_entropy_with_logits
+        loss_fn = tf.nn.softmax_cross_entropy_with_logits_v2
 
     #Add a condition to stop when all the labels are flipped! Done!
     def _cond(x_adv, all_flipped):
@@ -62,7 +62,7 @@ def fgsm_wrt_class(model, x, label, step_size=2, clip_min=0., clip_max=1., bbox_
         ones = tf.ones(tf.shape(dy_dx), tf.float32)
         mask = tf.where(not_flipped, ones, zeroes)
         dy_dx = tf.reshape(dy_dx,[-1,32*32*3])
-        mag = tf.norm(dy_dx,axis=1, keep_dims=True)
+        mag = tf.norm(dy_dx,axis=1, keepdims=True)
         ans = tf.cond(tf.equal(tf.reduce_sum(mag),0.0),lambda: tf.ones(tf.shape(dy_dx)), lambda: tf.ones(tf.shape(dy_dx))/(mag))
         mask = tf.cond(tf.equal(tf.reduce_sum(mag),0.0),lambda: zeroes, lambda: mask)
         ans = ans*(step_size)
