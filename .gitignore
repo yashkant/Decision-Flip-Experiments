@@ -3,3 +3,4 @@ cifar-10-batches-py/
 data/
 __pycache__/
 CIFAR/trash/
+.idea

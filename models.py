@@ -41,8 +41,11 @@ def model(x, logits=False, training=False):
 def sub_attack_model(model_shape):
     x = tf.placeholder(tf.float32, (None, model_shape[0]), name='x')
     y = tf.placeholder(tf.float32, (None, n_classes), name='y')
+    
     mid_layer = tf.layers.dense(x, units=model_shape[1], name='mid_layer')
+    
     logit = tf.layers.dense(mid_layer, units=model_shape[2], name='logit')
+    
     ybar = tf.nn.softmax(logit, name='ybar')
     
     #finding accuracy 
